@@ -41,7 +41,7 @@ const Router = () => {
           <PagErro />
         </Route>
       </Switch>
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
   );
 };

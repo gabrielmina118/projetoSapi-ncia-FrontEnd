@@ -1,9 +1,9 @@
 import { Button, FormLabel, TextField, FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
 import React from 'react';
 import useForm from '../../Hooks/useForm';
-import { Form, Titulo, Main } from './style';
+import { Form, Titulo, Main, SubTitulo, GroupControlLabel } from './style';
 
-const SejaSapiente = () => {
+const FormStep2 = () => {
 
     const initialState = {
         "name": "",
@@ -34,133 +34,66 @@ const SejaSapiente = () => {
 
     return (
         <Main>
-            <Titulo>Seja sapiente</Titulo>
+            <Titulo>Como você se identifica?</Titulo>
+            <SubTitulo>Nenhuma dessas perguntas é eliminatória, queremos apenas saber mais sobre você e entender quem nosso curso atinge.</SubTitulo>
             <Form onSubmit={onSubmitForm}>
-                <TextField
-                    autoFocus
-                    name={'name'}
-                    value={form.name}
-                    onChange={onChange}
-                    size="normal"
-                    required
-                    fullWidth
-                    borderColor='green'
-                    label="Nome"
-                    style={{ margin: 8 }}
-                    margin="normal"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    variant="outlined"
-                />
-                <TextField
-                    autoFocus
-                    name={'email'}
-                    value={form.email}
-                    onChange={onChange}
-                    type='email'
-                    size="normal"
-                    required
-                    fullWidth
-                    borderColor='green'
-                    label="E-mail"
-                    style={{ margin: 8 }}
-                    margin="normal"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    variant="outlined"
-                />
-                <TextField
-                    autoFocus
-                    name={'phone'}
-                    value={form.phone}
-                    onChange={onChange}
-                    size="normal"
-                    required
-                    fullWidth
-                    borderColor='green'
-                    label="Celular (com DDD)"
-                    style={{ margin: 8 }}
-                    margin="normal"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    variant="outlined"
-                />
-                <TextField
-                    autoFocus
-                    name={'age'}
-                    value={form.age}
-                    onChange={onChange}
-                    type="number"
-                    size="normal"
-                    required
-                    fullWidth
-                    borderColor='green'
-                    label="Idade"
-                    style={{ margin: 8 }}
-                    margin="normal"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    variant="outlined"
-                />
-                <TextField
-                    autoFocus
-                    name={'neighbor'}
-                    value={form.neighbor}
-                    onChange={onChange}
-                    size="normal"
-                    required
-                    fullWidth
-                    borderColor='green'
-                    label="Bairro"
-                    style={{ margin: 8 }}
-                    margin="normal"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    variant="outlined"
-                />
-                <TextField
-                    autoFocus
-                    name={'city'}
-                    value={form.city}
-                    onChange={onChange}
-                    size="normal"
-                    required
-                    fullWidth
-                    borderColor='green'
-                    label="Cidade"
-                    style={{ margin: 8 }}
-                    margin="normal"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    variant="outlined"
-                />
 
-                <FormLabel component="legend">Escolaridade</FormLabel>
-                <RadioGroup aria-label="gender" name="clientSituation" value={form.clientSituation} onChange={onChange}>
-                    <FormControlLabel value="EFI" control={<Radio />} label="Ensino Fundamental incompleto" />
-                    <FormControlLabel value="EFC" control={<Radio />} label="Ensino fundamental completo" />
-                    <FormControlLabel value="EMI" control={<Radio />} label="Ensino médio incompleto" />
-                    <FormControlLabel value="EMC" control={<Radio />} label="Ensino médio completo" />
-                    <FormControlLabel value="ESI" control={<Radio />} label="Ensino superior incompleto" />
-                    <FormControlLabel value="ESC" control={<Radio />} label="Ensino superior completo" />
+                <FormLabel component="legend">Identidade de Gênero</FormLabel>
+                <RadioGroup aria-label="gender" name="gender" value={form.gender} onChange={onChange}>
+                    <GroupControlLabel>
+                        <FormControlLabel value="homem" control={<Radio />} label="homem" />
+                        <FormControlLabel value="mulher" control={<Radio />} label="mulher" />
+                        <FormControlLabel value="naoBinario" control={<Radio />} label="NãoBinário" />
+                        <FormControlLabel value="outro" control={<Radio />} label="Outro" />
+                    </GroupControlLabel>
                 </RadioGroup>
 
-                    
+                <FormLabel component="legend">Você se considera uma pessoa LGBT?</FormLabel>
+                <RadioGroup aria-label="gender" name="lgbt" value={form.lgbt} onChange={onChange}>
+                    <GroupControlLabel>
+                        <FormControlLabel value="sim" control={<Radio />} label="Sim" />
+                        <FormControlLabel value="nao" control={<Radio />} label="Não" />
+                        <FormControlLabel value="talvez" control={<Radio />} label="Talvez" />
+                        <FormControlLabel value="prefiroNaoResponder" control={<Radio />} label="Prefiro não responder" />
+                    </GroupControlLabel>
+                </RadioGroup>
 
-                <Button
-                    type='submit'
-                    variant="contained"
-                    color="primary"
-                    bg='brand.100'>Registrar</Button>
+                <FormLabel component="legend">Você se considera uma pessoa trans?</FormLabel>
+                <RadioGroup aria-label="gender" name="trans" value={form.trans} onChange={onChange}>
+                    <GroupControlLabel>
+                        <FormControlLabel value="sim" control={<Radio />} label="Sim" />
+                        <FormControlLabel value="nao" control={<Radio />} label="Não" />
+                        <FormControlLabel value="talvez" control={<Radio />} label="Talvez" />
+                        <FormControlLabel value="prefiroNaoResponder" control={<Radio />} label="Prefiro não responder" />
+                    </GroupControlLabel>
+                </RadioGroup>
+
+                <FormLabel component="legend">Identificação racial</FormLabel>
+                <RadioGroup aria-label="gender" name="race" value={form.race} onChange={onChange}>
+                    <GroupControlLabel>
+                        <FormControlLabel value="negro" control={<Radio />} label="Negro" />
+                        <FormControlLabel value="branco" control={<Radio />} label="Branco" />
+                        <FormControlLabel value="pardo" control={<Radio />} label="Pardo" />
+                        <FormControlLabel value="amarelo" control={<Radio />} label="Amarelo" />
+                        <FormControlLabel value="indigena" control={<Radio />} label="Indígena" />
+                        <FormControlLabel value="outro" control={<Radio />} label="Outro" />
+                        <FormControlLabel value="prefiroNaoResponder" control={<Radio />} label="Prefiro não responder" />
+                    </GroupControlLabel>
+                </RadioGroup>
+
+                <FormLabel component="legend">Você considera seu bairro periférico?</FormLabel>
+                <RadioGroup aria-label="gender" name="suburb" value={form.suburb} onChange={onChange}>
+                    <GroupControlLabel>
+                        <FormControlLabel value="sim" control={<Radio />} label="Sim" />
+                        <FormControlLabel value="nao" control={<Radio />} label="Não" />
+                        <FormControlLabel value="naoSei" control={<Radio />} label="Não sei" />
+                        <FormControlLabel value="prefiroNaoResponder" control={<Radio />} label="Prefiro não responder" />
+                    </GroupControlLabel>
+                </RadioGroup>
+
             </Form>
         </Main>
     );
 };
 
-export default SejaSapiente;
+export default FormStep2;

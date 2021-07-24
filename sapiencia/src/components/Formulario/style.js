@@ -2,13 +2,18 @@ import styled from 'styled-components'
 
 
 export const Main = styled.div`
-    margin-top: 6rem;
-    height: 50rem;
+    margin-top: 1rem;
+    min-height: 50rem;
 `
-export const Fisinh = styled.div`
+export const SubTitulo = styled.div`
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+`
+export const GroupControlLabel = styled.div`
     display: flex;
-    font-size:25px;
-    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
 `
 
 export const Titulo = styled.div`
@@ -23,9 +28,4 @@ export const Form = styled.form`
     flex-direction: column;
     align-items:center;
 `
-export const Buttons = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-`
+
