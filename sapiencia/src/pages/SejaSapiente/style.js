@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const Main = styled.div`
-    /* min-height: 300px; */
+    margin-top: 6rem;
     height: 50rem;
 `
 

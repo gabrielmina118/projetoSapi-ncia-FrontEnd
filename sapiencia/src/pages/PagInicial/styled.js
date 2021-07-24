@@ -6,7 +6,8 @@ export const ImageContainer = styled.div`
   background-repeat: round;
   max-width: 100%;
   background-size: contain;
-  height: 28rem;
+  margin-top: 6rem;
+  height: 30rem;
   display: flex;
   align-items: flex-end;
   box-shadow: 0px -200px 57px -14px rgba(0, 0, 0, 0.61) inset;
@@ -20,6 +21,7 @@ export const ImageContainer = styled.div`
     -moz-box-shadow: 0px -200px 51px 53px rgba(0, 0, 0, 0.61) inset;
   }
 `;
+
 
 export const TextContainer = styled.div`
   padding: 2rem 5rem;
@@ -37,4 +39,7 @@ export const P = styled.p`
   margin-bottom: -1rem;
 `;
 
-
+export const DivContainer = styled.div`
+  width: 100%;
+  height: 60rem;
+`;
