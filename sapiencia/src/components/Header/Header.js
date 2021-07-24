@@ -24,7 +24,7 @@ const Header = ({ toggle }) => {
         <NavLink to="/quem-somos">Quem Somos</NavLink>
         <NavLink to="/depoimentos">Depoimentos</NavLink>
         <NavLink to="/voluntarios">voluntários</NavLink>
-        <NavBtnLink to="/">Seja Sapiente</NavBtnLink>
+        <NavBtnLink to="/sejaSapiente">Seja Sapiente</NavBtnLink>
       </NavMenu>
       <NavBtn></NavBtn>
     </Nav>
