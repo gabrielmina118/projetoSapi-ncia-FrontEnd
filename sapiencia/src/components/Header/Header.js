@@ -24,10 +24,9 @@ const Header = ({ toggle }) => {
         <NavLink to="/quem-somos">Quem Somos</NavLink>
         <NavLink to="/depoimentos">Depoimentos</NavLink>
         <NavLink to="/voluntarios">voluntários</NavLink>
+        <NavBtnLink to="/">Seja Sapiente</NavBtnLink>
       </NavMenu>
-      <NavBtn>
-        <NavBtnLink to="/">Seja Aluno</NavBtnLink>
-      </NavBtn>
+      <NavBtn></NavBtn>
     </Nav>
   );
 };
