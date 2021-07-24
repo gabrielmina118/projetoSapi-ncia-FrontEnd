@@ -21,20 +21,12 @@ const Header = ({ toggle }) => {
         <Bars />
       </MobileIcon>
       <NavMenu>
-        <NavLink to="/quem-somos" >
-          Quem Somos
-        </NavLink>
-        <NavLink to="/depoimentos" >
-          Depoimentos
-        </NavLink>
-        <NavLink to="/voluntarios" >
-          voluntários
-        </NavLink>
+        <NavLink to="/quem-somos">Quem Somos</NavLink>
+        <NavLink to="/depoimentos">Depoimentos</NavLink>
+        <NavLink to="/voluntarios">voluntários</NavLink>
       </NavMenu>
       <NavBtn>
-        <NavBtnLink to="/" >
-          Seja Aluno
-        </NavBtnLink>
+        <NavBtnLink to="/">Seja Aluno</NavBtnLink>
       </NavBtn>
     </Nav>
   );
