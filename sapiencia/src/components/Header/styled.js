@@ -28,11 +28,14 @@ export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  margin-left: 3rem;
   &.active {
-    color: #8643DB;
+    font-weight: bolder;
   }
 `;
 
@@ -68,6 +71,9 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -24px;
+  @media screen and (max-width: 845px) {
+    font-size: 0.8rem;
+  }
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -84,7 +90,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #8643DB;
+  background: #8643db;
   padding: 10px 22px;
   color: #fff;
   outline: none;
@@ -93,6 +99,7 @@ export const NavBtnLink = styled(Link)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   margin-left: 24px;
+
   &:hover {
     transition: all 0.5s ease-in-out;
     background: #44039e;
