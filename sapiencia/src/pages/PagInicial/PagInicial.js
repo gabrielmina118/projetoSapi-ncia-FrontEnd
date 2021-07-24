@@ -1,11 +1,19 @@
-import React from 'react'       
+import React from 'react';
+import Img2 from '../../assets/Img2.jpg';
+import { ImageContainer, Image } from './styled';
 
 const PagInicial = () => {
-    return (
-        <div>
-            <h1>PagInicial</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <ImageContainer>
+        <Image src={Img2} />
+      </ImageContainer>
+      teste
+      teste
+      teste
+      teste
+    </div>
+  );
+};
 
-export default PagInicial
+export default PagInicial;

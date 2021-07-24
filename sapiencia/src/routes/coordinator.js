@@ -3,13 +3,13 @@ export const goToHome = (history) => {
 };
 
 export const goToDepoimentos = (history) => {
-    history.push('/depoimentos');
-  };
+  history.push('/depoimentos');
+};
 
-  export const goToVoluntarios = (history) => {
-    history.push('/voluntarios');
-  };
+export const goToVoluntarios = (history) => {
+  history.push('/voluntarios');
+};
 
-  export const goToQuemSomos = (history) => {
-    history.push('/quem-somos');
-  };
+export const goToQuemSomos = (history) => {
+  history.push('/quem-somos');
+};
