@@ -1,17 +1,16 @@
 import React from 'react';
-import Img2 from '../../assets/Img2.jpg';
-import { ImageContainer, Image, Main } from './styled';
+import { ImageContainer, H1, TextContainer, P } from './styled';
 
 const PagInicial = () => {
   return (
     <div>
       <ImageContainer>
-        <Image src={Img2} />
+        <TextContainer>
+          <P>SAPIÊNCIA</P>
+          <H1>EMPODERANDO TALENTOS DA PERIFERIA POR MEIO DA EDUCAÇÃO</H1>
+        </TextContainer>
       </ImageContainer>
-      teste
-      teste
-      teste
-      teste
+      teste teste teste teste
     </div>
   );
 };
