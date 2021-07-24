@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageContainer, H1, TextContainer, P } from './styled';
+import { ImageContainer, H1, TextContainer, P, DivContainer } from './styled';
 
 const PagInicial = () => {
   return (
@@ -10,7 +10,18 @@ const PagInicial = () => {
           <H1>EMPODERANDO TALENTOS DA PERIFERIA POR MEIO DA EDUCAÇÃO</H1>
         </TextContainer>
       </ImageContainer>
-      teste teste teste teste
+      <DivContainer>
+        <h1>TESTE TESTE TESTE</h1>
+        <h2>teste teste teste teste</h2>
+      </DivContainer>
+      <DivContainer>
+        <h1>TESTE TESTE TESTE</h1>
+        <h2>teste teste teste teste</h2>
+      </DivContainer>
+      <DivContainer>
+        <h1>TESTE TESTE TESTE</h1>
+        <h2>teste teste teste teste</h2>
+      </DivContainer>
     </div>
   );
 };
