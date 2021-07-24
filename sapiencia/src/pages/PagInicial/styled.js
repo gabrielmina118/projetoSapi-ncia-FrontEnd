@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Main = styled.div`
+  /* min-height: 100vh; */
+`
+
 export const Image = styled.img`
   width: 100%;
   height: 30rem;
@@ -16,3 +20,5 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
 `;
+
+

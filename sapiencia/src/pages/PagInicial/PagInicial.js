@@ -1,6 +1,6 @@
 import React from 'react';
 import Img2 from '../../assets/Img2.jpg';
-import { ImageContainer, Image } from './styled';
+import { ImageContainer, Image, Main } from './styled';
 
 const PagInicial = () => {
   return (
