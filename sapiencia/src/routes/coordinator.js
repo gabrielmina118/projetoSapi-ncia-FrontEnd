@@ -13,3 +13,7 @@ export const goToVoluntarios = (history) => {
 export const goToQuemSomos = (history) => {
   history.push('/quem-somos');
 };
+
+export const goToSejaSapiente = (history) =>{
+  history.push('/sejaSapiente')
+}

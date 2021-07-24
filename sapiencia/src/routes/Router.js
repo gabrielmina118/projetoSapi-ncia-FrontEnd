@@ -8,6 +8,7 @@ import PagErro from '../pages/PagErro/PagErro';
 import Header from '../components/Header/Header';
 import SideBar from '../components/Header/SideBar/SideBar';
 import Footer from '../components/Footer/Footer';
+import SejaSapiente from '../pages/SejaSapiente/SejaSapiente';
 
 const Router = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,9 @@ const Router = () => {
         </Route>
         <Route exact path="/voluntarios">
           <Voluntarios />
+        </Route>
+        <Route exact path="/sejaSapiente">
+          <SejaSapiente />
         </Route>
         <Route>
           <PagErro />
