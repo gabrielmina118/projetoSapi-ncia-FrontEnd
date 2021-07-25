@@ -1,6 +1,6 @@
 import { Button, FormLabel, TextField, FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
 import React from 'react';
-import useForm from '../../Hooks/useForm';
+import useForm from '../../hooks/useForm';
 import { Form, Titulo, Main, GroupControlLabel } from './style';
 
 const FormStep3 = () => {

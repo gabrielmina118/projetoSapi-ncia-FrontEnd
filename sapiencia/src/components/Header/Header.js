@@ -11,9 +11,12 @@ import {
 } from './styled';
 import Logo from '../../assets/Logo.png';
 import { animateScroll as scroll } from 'react-scroll';
+import { goToSejaSapiente } from '../../routes/coordinator';
+import { useHistory } from 'react-router';
 
 const Header = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const history = useHistory();
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -70,7 +73,9 @@ const Header = ({ toggle }) => {
         >
           Apoio
         </NavLink>
-        <NavBtnLink to="/">Seja Sapiente</NavBtnLink>
+        <NavBtnLink to="/seja-sapiente" onClick={goToSejaSapiente(history)}>
+          Seja Sapiente
+        </NavBtnLink>
       </NavMenu>
       <NavBtn></NavBtn>
     </Nav>
