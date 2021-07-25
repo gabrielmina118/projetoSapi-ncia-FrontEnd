@@ -1,5 +1,4 @@
 import React from 'react';
-import Template1 from '../../assets/Template1.png';
 import {
   Column1,
   Column2,
@@ -22,7 +21,8 @@ const InfoSection = ({
   darkText,
   description,
   description2,
-  description3
+  description3,
+  img
 }) => {
   return (
     <>
@@ -39,7 +39,7 @@ const InfoSection = ({
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={Template1} alt={'Template1'} />
+                <Img src={img} alt={'Template1'} />
               </ImgWrap>
             </Column2>
           </InfoRow>

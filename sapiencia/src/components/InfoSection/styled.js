@@ -34,14 +34,18 @@ export const InfoRow = styled.div`
 `;
 
 export const Column1 = styled.div`
+  display: flex;
+  justify-content: center;
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
 `;
 export const Column2 = styled.div`
+  display: flex;
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+  justify-content: center;
 `;
 
 export const TextWrapper = styled.div`
@@ -85,18 +89,18 @@ export const Subtitle = styled.p`
 `;
 
 export const BtnWrap = styled.div`
-    display: flex;
-    justify-content: flex-start;
-`
+  display: flex;
+  justify-content: flex-start;
+`;
 
 export const ImgWrap = styled.div`
-    max-width: 555px;
-    height: 100%;
-`
+  max-width: 555px;
+  height: 100%;
+`;
 
 export const Img = styled.img`
-    width: auto;
-    height: 10rem;
-    margin: 0 0 10px 0;
-    padding-right: 0;
-`
+  width: 15rem;
+  height: 15rem;
+  margin: 0 0 2rem 0;
+  padding-right: 0;
+`;

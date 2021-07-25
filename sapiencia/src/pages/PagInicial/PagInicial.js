@@ -10,6 +10,7 @@ import { ImageContainer, H1, TextContainer, P } from './styled';
 import { useState } from 'react';
 import SideBar from '../../components/Header/SideBar/SideBar';
 import Header from '../../components/Header/Header';
+import InfoSection2 from '../../components/InfoSection/InfoSection2';
 
 const PagInicial = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +32,7 @@ const PagInicial = () => {
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
+      <InfoSection2 />
       <Footer />
     </div>
   );

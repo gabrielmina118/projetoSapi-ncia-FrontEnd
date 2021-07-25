@@ -34,6 +34,10 @@ const Header = ({ toggle }) => {
     scroll.scrollToTop();
   };
 
+  const toggleBottom = () => {
+    scroll.scrollToBottom();
+  };
+
   return (
     <Nav scrollNav={scrollNav}>
       <NavLink to="/" onClick={toggleHome}>
@@ -73,8 +77,9 @@ const Header = ({ toggle }) => {
         >
           Apoio
         </NavLink>
-        <NavBtnLink to="/seja-sapiente" onClick={goToSejaSapiente(history)}>
-          Seja Sapiente
+        <NavLink onClick={toggleBottom}>Contato</NavLink>
+        <NavBtnLink to={''} offset={-80} onClick={() => goToSejaSapiente(history)}>
+          Inscreva-se
         </NavBtnLink>
       </NavMenu>
       <NavBtn></NavBtn>
