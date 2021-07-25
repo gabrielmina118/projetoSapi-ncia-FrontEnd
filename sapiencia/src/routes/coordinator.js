@@ -3,6 +3,6 @@ export const goToHome = (history) => {
 };
 
 export const goToSejaSapiente = (history) =>{
-  history.push('/sejaSapiente')
+  history.push('/seja-sapiente')
 }
 

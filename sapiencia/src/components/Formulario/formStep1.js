@@ -1,46 +1,18 @@
-import { Button, FormLabel, TextField, FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
+import {TextField, FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
 import React from 'react';
-import useForm from '../../Hooks/useForm';
-import FormStep2 from './formStep2';
-import FormStep3 from './formStep3';
 import { Form, Titulo, Main } from './style';
 
-const FormStep1 = () => {
+const FormStep1 = (props) => {
 
-    const initialState = {
-        "name": "",
-        "email": "",
-        "phone": "",
-        "age": "",
-        "neighbor": "",
-        "city": "",
-        "scholarity": "",
-        "gender": "",
-        "lgbt": "",
-        "trans": "",
-        "race": "",
-        "suburb": "",
-        "internet": "",
-        "access": "",
-        "receive": "",
-        "permission": ""
-    }
-
-    const [form, onChange, clear] = useForm(initialState)
-
-    const onSubmitForm = (event) => {
-        event.preventDefault();
-        console.log(form)
-    }
-
+   
     return (
         <Main>
-            <Form onSubmit={onSubmitForm}>
+            <Form onSubmit={props.onSubmitForm}>
                 <TextField
                     autoFocus
                     name={'name'}
-                    value={form.name}
-                    onChange={onChange}
+                    value={props.form.name}
+                    onChange={props.onChange}
                     size="normal"
                     required
                     fullWidth
@@ -56,8 +28,8 @@ const FormStep1 = () => {
                 <TextField
                     autoFocus
                     name={'email'}
-                    value={form.email}
-                    onChange={onChange}
+                    value={props.form.email}
+                    onChange={props.onChange}
                     type='email'
                     size="normal"
                     required
@@ -74,8 +46,8 @@ const FormStep1 = () => {
                 <TextField
                     autoFocus
                     name={'phone'}
-                    value={form.phone}
-                    onChange={onChange}
+                    value={props.form.phone}
+                    onChange={props.onChange}
                     size="normal"
                     required
                     fullWidth
@@ -91,8 +63,8 @@ const FormStep1 = () => {
                 <TextField
                     autoFocus
                     name={'age'}
-                    value={form.age}
-                    onChange={onChange}
+                    value={props.form.age}
+                    onChange={props.onChange}
                     type="number"
                     size="normal"
                     required
@@ -109,8 +81,8 @@ const FormStep1 = () => {
                 <TextField
                     autoFocus
                     name={'neighbor'}
-                    value={form.neighbor}
-                    onChange={onChange}
+                    value={props.form.neighbor}
+                    onChange={props.onChange}
                     size="normal"
                     required
                     fullWidth
@@ -126,8 +98,8 @@ const FormStep1 = () => {
                 <TextField
                     autoFocus
                     name={'city'}
-                    value={form.city}
-                    onChange={onChange}
+                    value={props.form.city}
+                    onChange={props.onChange}
                     size="normal"
                     required
                     fullWidth
@@ -142,7 +114,7 @@ const FormStep1 = () => {
                 />
                 
                 <h2>Escolaridade</h2>
-                <RadioGroup aria-label="gender" name="clientSituation" value={form.clientSituation} onChange={onChange}>
+                <RadioGroup aria-label="gender" name="scholarity" value={props.form.scholarity} onChange={props.onChange}>
                     <FormControlLabel value="EFI" control={<Radio />} label="Ensino Fundamental incompleto" />
                     <FormControlLabel value="EFC" control={<Radio />} label="Ensino fundamental completo" />
                     <FormControlLabel value="EMI" control={<Radio />} label="Ensino médio incompleto" />

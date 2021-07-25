@@ -22,6 +22,9 @@ const Router = () => {
         <Route exact path="/">
           <PagInicial />
         </Route>
+        <Route exta path="/seja-sapiente">
+          <SejaSapiente/>
+        </Route>
         <Route>
           <PagErro />
         </Route>
