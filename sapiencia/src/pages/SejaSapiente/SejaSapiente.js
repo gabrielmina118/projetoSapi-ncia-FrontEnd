@@ -1,15 +1,17 @@
-import { Button } from '@material-ui/core';
 import React, { useState } from 'react';
+import { Button } from '@material-ui/core';
 import FormStep1 from '../../components/Formulario/formStep1';
 import FormStep2 from '../../components/Formulario/formStep2';
 import FormStep3 from '../../components/Formulario/formStep3';
 import useForm from '../../Hooks/useForm';
-import { Main, Fisinh , Buttons} from './style';
+import { Main, Fisinh, Buttons } from './style';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Typography from '@material-ui/core/Typography';
+import { goToHome } from '../../routes/coordinator';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -30,45 +32,67 @@ function getSteps() {
     return ['Informações Básicas', 'Como você se identifica', 'Sobre o curso'];
 }
 
-function getStepContent(step) {
-    switch (step) {
-        case 0:
-            return <FormStep1 />
-        case 1:
-            return <FormStep2 />
-        case 2:
-            return <FormStep3 />
-        default:
-            return 'Unknown step';
-    }
-}
 
 const SejaSapiente = () => {
 
-    // const initialState = {
-    //     "name": "",
-    //     "email": "",
-    //     "phone": "",
-    //     "age": "",
-    //     "neighbor": "",
-    //     "city": "",
-    //     "scholarity": "",
-    //     "gender": "",
-    //     "lgbt": "",
-    //     "trans": "",
-    //     "race": "",
-    //     "suburb": "",
-    //     "internet": "",
-    //     "access": "",
-    //     "receive": "",
-    //     "permission": ""
-    // }
+    const initialState = {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "age": "",
+        "neighbor": "",
+        "city": "",
+        "scholarity": "",
+        "gender": "",
+        "lgbt": "",
+        "trans": "",
+        "race": "",
+        "suburb": "",
+        "internet": "",
+        "access": "",
+        "receive": "",
+        "permission": ""
+    }
 
-    // const [form, onChange, clear] = useForm(initialState);
+    const [form, onChange, clear] = useForm(initialState)
+
+
+    const onSubmitForm = (event) => {
+        event.preventDefault();
+        console.log(form)
+    }
+
+    function getStepContent(step) {
+        switch (step) {
+            case 0:
+                return <FormStep1
+                    form={form}
+                    onChange={onChange}
+                    onSubmitForm={onSubmitForm}
+                />
+            case 1:
+                return <FormStep2
+                    form={form}
+                    onChange={onChange}
+                    onSubmitForm={onSubmitForm}
+                />
+            case 2:
+                return <FormStep3
+                    form={form}
+                    onChange={onChange}
+                    onSubmitForm={onSubmitForm}
+                />
+            default:
+                return 'Unknown step';
+        }
+    }
+
+
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [skipped, setSkipped] = React.useState(new Set());
     const steps = getSteps();
+    const history = useHistory();
 
     const isStepOptional = (step) => {
         return step === 1;
@@ -84,7 +108,11 @@ const SejaSapiente = () => {
             newSkipped = new Set(newSkipped.values());
             newSkipped.delete(activeStep);
         }
-
+        
+        if(activeStep === 2){
+            // Chamada da api
+            console.log(form)
+        }
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
         setSkipped(newSkipped);
     };
@@ -119,6 +147,8 @@ const SejaSapiente = () => {
                         <div>
                             <Typography className={classes.instructions}>
                                 <Fisinh>Cadastrado com sucesso ! Dentro de 72 horas entraremos em contato</Fisinh>
+                                // BOTAO PRA HOME
+                                <button onClick={()=>goToHome(history)}>Teste</button>
                             </Typography>
                         </div>
                     ) : (
