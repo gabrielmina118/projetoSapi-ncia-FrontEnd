@@ -80,12 +80,12 @@ export const SidebarRoute = styled(LinkR)`
   font-size: 16px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
   text-decoration: none;
   
 
   &:hover {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in;
     background: #fff;
     color: black;
   }
