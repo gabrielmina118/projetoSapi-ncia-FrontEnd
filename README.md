@@ -1,7 +1,7 @@
 # Projeto Front-end da ONG Sapiência - ProviHack4Good (Julho/2021)
 
 ## Sobre
-Lorem Ipsum
+Nossa solução foi pensar um website responsivo que capta voluntários e estudantes através de formulários de inscrição. Além de divulgar os cursos abertos e conectar todas as redes e contatos do projeto.
 
 ---
 
