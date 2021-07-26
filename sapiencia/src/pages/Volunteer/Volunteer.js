@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { goToHome } from '../../routes/coordinator';
-import  useForm  from '../../hooks/useForm'
+import useForm from '../../hooks/useForm';
 import { FormContainer } from './styles';
 import {
   Button,
@@ -20,7 +20,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 const Volunteer = () => {
   const history = useHistory();
-  const { form, onChange, resetState } = useForm({
+  
+  const [form, onChange, clear] = useForm({
     name: '',
     obs: '',
     birthday: '',
@@ -38,11 +39,6 @@ const Volunteer = () => {
     acordo3: false,
     acordo4: false
   });
-
-  const handleInputChange = (event) => {
-    const { value, name } = event.target;
-    onChange(value, name);
-  };
 
   const handleRadioChange = (event) => {
     const { checked, name } = event.target;
@@ -73,14 +69,12 @@ const Volunteer = () => {
       .post(`${BASE_URL}/volunteers/datatoemail`, body)
       .then((res) => {
         alert('Formulário enviado. Aguarde o contato em até 72 horas.');
-        resetState();
+        clear();
         goToHome(history);
       })
       .catch((err) => {
-        console.log(err.response.data);
         alert('Desculpe, houve um problema. Tente novamente.');
       });
-    console.log(body);
   };
 
   return (
@@ -95,7 +89,7 @@ const Volunteer = () => {
           style={{ backgroundColor: grey[50] }}
           multiline
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="No caso de pessoas trans, coloque o nome que se identifica. Dane-se o RG!"
         />
         <TextField
@@ -107,7 +101,7 @@ const Volunteer = () => {
           style={{ backgroundColor: grey[50] }}
           multiline
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Como prefere que as pessoas se refiram a você?"
         />
         <TextField
@@ -118,7 +112,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="dd/mm/aaaa"
         />
         <TextField
@@ -129,7 +123,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <TextField
@@ -140,7 +134,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <TextField
@@ -151,7 +145,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Órgão/Estado"
         />
         <TextField
@@ -163,7 +157,7 @@ const Volunteer = () => {
           style={{ backgroundColor: grey[50] }}
           multiline
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Rua/Av, Número, CEP, Cidade e Estado"
         />
         <TextField
@@ -174,7 +168,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Preencha aqui"
         />
         <TextField
@@ -185,7 +179,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <TextField
@@ -196,7 +190,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <FormControl component="fieldset">
@@ -207,7 +201,7 @@ const Volunteer = () => {
             aria-label="department"
             name="department"
             value={form.department}
-            onChange={handleInputChange}
+            onChange={onChange}
           >
             <FormControlLabel
               value="Administrativo"
@@ -239,7 +233,7 @@ const Volunteer = () => {
             aria-label="hours"
             name="hours"
             value={form.hours}
-            onChange={handleInputChange}
+            onChange={onChange}
           >
             <FormControlLabel value="3h" control={<Radio />} label="3 horas" />
             <FormControlLabel value="4h" control={<Radio />} label="4 horas" />

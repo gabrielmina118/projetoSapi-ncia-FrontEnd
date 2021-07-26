@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import {
   ButtonC,
   Column1,
@@ -27,7 +26,6 @@ const InfoSection = ({
   img,
   button
 }) => {
-  const history = useHistory();
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -39,7 +37,7 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <Subtitle darkText={darkText}>{description2}</Subtitle>
                 <Subtitle darkText={darkText}>{description3}</Subtitle>
-                <ButtonC button={button} to="/voluntario">
+                <ButtonC button={+button} to="/voluntario">
                   Seja Voluntário
                 </ButtonC>
               </TextWrapper>

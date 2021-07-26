@@ -5,6 +5,10 @@ export const Main = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
+  width: auto;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1rem;
   circle{
       color: black;

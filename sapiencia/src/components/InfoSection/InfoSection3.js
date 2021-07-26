@@ -59,15 +59,6 @@ const InfoSection3 = () => {
           </SwiperSlide>
         </Swiper>
       </Container2>
-      <Container3>
-      <Heading>ENTRE EM CONTATO</Heading>
-      <P2>
-        Quer saber mais sobre os cursos, quer apoiar nosso projeto ou tem alguma
-        dúvida? Entre em contato com a gente através do código QR abaixo.
-      </P2>
-        <QRCode src={QrCode} />
-        <Button onClick={() => goToSejaSapiente(history)}>Inscreva-se</Button>
-      </Container3>
     </GlobalContainer>
   );
 };

@@ -54,7 +54,6 @@ const SejaSapiente = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log(form);
   };
 
   function getStepContent(step) {
@@ -110,7 +109,6 @@ const SejaSapiente = () => {
     }
 
     if (activeStep === 2) {
-      console.log(form);
     }
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);

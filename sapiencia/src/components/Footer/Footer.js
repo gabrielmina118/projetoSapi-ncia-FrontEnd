@@ -17,11 +17,16 @@ import {
 import Logo from '../../assets/Logo.png';
 import { FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
+import { useHistory } from 'react-router';
+import { goToSejaSapiente } from '../../routes/coordinator';
 
 const Footer = () => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
+
+  const history = useHistory()
+
   return (
     <FooterContainer>
       <FooterWrap>
@@ -66,9 +71,7 @@ const Footer = () => {
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Seja Sapiente</FooterLinkTitle>
-              <FooterLink to="/seja-sapiente">Inscrição</FooterLink>
-              <FooterLink to="/seja-sapiente">Acesso</FooterLink>
-              <FooterLink to="/seja-sapiente">Dúvidas</FooterLink>
+              <FooterLink to="/seja-sapiente" onClick={() => goToSejaSapiente(history)}>Inscrição</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
