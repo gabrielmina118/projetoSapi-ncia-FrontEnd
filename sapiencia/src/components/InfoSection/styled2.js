@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const GlobalContainer = styled.div`
   text-align: center;
+  margin-top: 15rem;
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -15,7 +16,6 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8rem;
 
   @media screen and (max-width: 868px) {
     flex-direction: column;
@@ -29,9 +29,10 @@ export const Container2 = styled.div`
 
 export const Container3 = styled.div`
   height: 350px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-bottom: 20rem;
 `;
 
 export const InfoContainer = styled.div`
@@ -48,13 +49,16 @@ export const Img = styled.img`
   height: 15rem;
   margin: 0 0 2rem 0;
   padding-right: 0;
+  box-shadow: 8px 9px 23px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 8px 9px 23px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 9px 23px 0px rgba(0, 0, 0, 0.75);
 `;
 
 export const Heading = styled.h1`
   font-size: 2rem;
   line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -103,13 +107,13 @@ export const Button = styled.button`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
-  &:hover {
-    transition: all 0.5s ease-in-out;
-    background: #44039e;
-    color: #fff;
-  }
-
   @media screen and (max-width: 1050px) {
     padding: 10px 10px;
   }
+`;
+
+export const P2 = styled.p`
+  font-weight: 600;
+  margin: 2rem;
+  max-width: 200px;
 `;

@@ -103,12 +103,6 @@ export const NavBtnLink = styled(Link)`
   text-decoration: none;
   margin-left: 2rem;
 
-  &:hover {
-    transition: all 0.5s ease-in-out;
-    background: #44039e;
-    color: #fff;
-  }
-
   @media screen and (max-width: 1050px) {
     padding: 10px 10px;
     margin-right: 2rem;

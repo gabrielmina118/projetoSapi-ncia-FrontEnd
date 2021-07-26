@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import SwiperCore, { Pagination } from 'swiper/core';
@@ -15,22 +14,11 @@ import {
   SubTitle,
   Container,
   Heading,
-  GlobalContainer,
-  Container2,
-  QRCode,
-  Button,
-  Container3
+  GlobalContainer
 } from './styled2';
 import Rafis from '../../assets/Rafis.png';
 import Joao from '../../assets/Joao.png';
 import Beatriz from '../../assets/Beatriz.png';
-import barkus from '../../assets/barkus.png';
-import fagulha from '../../assets/fagulha.png';
-import fretadao from '../../assets/fretadao.png';
-import linkedin from '../../assets/linkedin.png';
-import quero_bolsa from '../../assets/quero_bolsa.png';
-import vivare from '../../assets/vivare.png';
-import QrCode from '../../assets/QrCode.png';
 
 const InfoSection2 = () => {
   SwiperCore.use([Pagination]);
@@ -93,45 +81,6 @@ const InfoSection2 = () => {
           </CardContent>
         </InfoContainer>
       </Container>
-      <Heading>APOIADORES</Heading>
-      <Container2>
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          pagination={{
-            clickable: true
-          }}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={barkus} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={fagulha} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={fretadao} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={linkedin} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={quero_bolsa} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={vivare} />
-          </SwiperSlide>
-        </Swiper>
-      </Container2>
-      <Heading>ENTRE EM CONTATO</Heading>
-      <h3>
-        Quer saber mais sobre os cursos, quer apoiar nosso projeto ou tem alguma
-        dúvida? Entre em contato com a gente através do código QR abaixo.
-      </h3>
-      <Container3>
-        <QRCode src={QrCode} />
-        <Button>Inscreva-se</Button>
-      </Container3>
     </GlobalContainer>
   );
 };
