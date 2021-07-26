@@ -1,13 +1,14 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import {
+  homeObjFive,
   homeObjFour,
   homeObjOne,
   homeObjThree,
   homeObjTwo
 } from '../../components/InfoSection/Data';
 import InfoSection from '../../components/InfoSection/InfoSection';
-import { ImageContainer, H1, TextContainer, P, Div, Container, Container2, SButton } from './styled';
+import { ImageContainer, H1, TextContainer, P, Div, Container } from './styled';
 import { useState } from 'react';
 import SideBar from '../../components/Header/SideBar/SideBar';
 import Header from '../../components/Header/Header';
@@ -50,6 +51,7 @@ const PagInicial = () => {
       <InfoSection2 />
       <InfoSection {...homeObjFour} />
       <InfoSection3/>
+      <InfoSection {...homeObjFive} />
       <Footer />
     </div>
   );

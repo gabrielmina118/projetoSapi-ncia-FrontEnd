@@ -20,34 +20,24 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 const Volunteer = () => {
   const history = useHistory();
-  const [ form, onChange, onChangeRadio, clear ] = useForm({
-    name: "",
-    obs: "",
-    birthday: "",
-    cpf: "",
-    rg: "",
-    expeditor: "",
-    address: "",
-    email: "",
-    cellphone: "",
-    phone: "",
-    department: "",
-    hours: "",
+  const [form, onChange, onChangeRadio, clear] = useForm({
+    name: '',
+    obs: '',
+    birthday: '',
+    cpf: '',
+    rg: '',
+    expeditor: '',
+    address: '',
+    email: '',
+    cellphone: '',
+    phone: '',
+    department: '',
+    hours: '',
     acordo1: false,
     acordo2: false,
     acordo3: false,
     acordo4: false
   });
-
-//   const handleInputChange = (event) => {
-//     const { value, name } = event.target;
-//     onChange(value, name);
-//   };
-
-//   const handleRadioChange = (event) => {
-//     const { checked, name } = event.target;
-//     onChange(value, name);
-//   };
 
   const SendForm = (event) => {
     event.preventDefault();
@@ -77,10 +67,8 @@ const Volunteer = () => {
         goToHome(history);
       })
       .catch((err) => {
-        console.log(err.response.data);
         alert('Desculpe, houve um problema. Tente novamente.');
       });
-    console.log(body);
   };
 
   return (
@@ -212,6 +200,7 @@ const Volunteer = () => {
             <FormControlLabel
               value="Administrativo"
               control={<Radio />}
+              color='#0000'
               label="Departamento Administrativo"
             />
             <FormControlLabel
@@ -301,7 +290,7 @@ const Volunteer = () => {
           type="submit"
           onClick={SendForm}
           variant="contained"
-          style={{ color: grey[50], backgroundColor: red[500] }}
+          style={{ color: 'white', backgroundColor: 'black' }}
         >
           Enviar Formulário
         </Button>

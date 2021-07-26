@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 9vh;
+  padding: 9vh;
   height: 100%;
   min-height: 100vh;
   max-width: 80vw;
@@ -14,3 +14,4 @@ export const FormContainer = styled.div`
     padding-top: 22vh;
   }
 `;
+
