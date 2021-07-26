@@ -15,4 +15,4 @@ Clonar o reposit√≥rio, executar `npm install` no terminal e escolher uma das op√
 - Utilizar o link abaixo do Surge
 
 ## Link do Surge
-http://sapiencia-provihack4good.surge.sh/
+http://projeto-sapiencia.surge.sh
