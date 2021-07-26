@@ -3,7 +3,9 @@ import { Button } from '@material-ui/core';
 import FormStep1 from '../../components/Formulario/formStep1';
 import FormStep2 from '../../components/Formulario/formStep2';
 import FormStep3 from '../../components/Formulario/formStep3';
+
 import useForm from '../../Hooks/useForm';
+
 import { Main, Fisinh, Buttons } from './style';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -16,25 +18,37 @@ import { useHistory } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        width: '100%',
-    },
-    button: {
-        marginRight: theme.spacing(1),
-    },
-    instructions: {
-        marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1),
-    },
+  root: {
+    width: '100%'
+  },
+  button: {
+    marginRight: theme.spacing(1)
+  },
+  instructions: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1)
+  }
 }));
 
 function getSteps() {
-    return ['Informações Básicas', 'Como você se identifica', 'Sobre o curso'];
+  return ['Informações Básicas', 'Como você se identifica', 'Sobre o curso'];
 }
 
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return <FormStep1 />;
+    case 1:
+      return <FormStep2 />;
+    case 2:
+      return <FormStep3 />;
+    default:
+      return 'Unknown step';
+  }
+}
 
 const SejaSapiente = () => {
-
+  
     const initialState = {
         "name": "",
         "email": "",
@@ -171,8 +185,12 @@ const SejaSapiente = () => {
                     )}
                 </div>
             </div>
-        </Main>
-    );
+          )}
+          
+        </div>
+      </div>
+    </Main>
+  );
 };
 
 export default SejaSapiente;

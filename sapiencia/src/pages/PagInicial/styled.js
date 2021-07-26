@@ -18,7 +18,7 @@ export const ImageContainer = styled.div`
     box-shadow: -5px -151px 55px -35px rgba(0, 0, 0, 0.75) inset;
     -webkit-box-shadow: -5px -151px 55px -35px rgba(0, 0, 0, 0.75) inset;
     -moz-box-shadow: -5px -151px 55px -35px rgba(0, 0, 0, 0.75) inset;
-    height: 18.6rem;
+    height: 25rem;
   }
 `;
 
@@ -38,7 +38,7 @@ export const H1 = styled.h1`
 export const P = styled.p`
   color: white;
   font-weight: lighter;
-  margin-bottom: -1rem;
+  margin-bottom: -0.2rem;
 `;
 
 export const DivContainer = styled.div`

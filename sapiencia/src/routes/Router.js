@@ -1,35 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PagInicial from '../pages/PagInicial/PagInicial';
 import PagErro from '../pages/PagErro/PagErro';
-import Header from '../components/Header/Header';
-import SideBar from '../components/Header/SideBar/SideBar';
-import Footer from '../components/Footer/Footer';
 import SejaSapiente from '../pages/SejaSapiente/SejaSapiente';
 
 const Router = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <BrowserRouter>
-      <SideBar isOpen={isOpen} toggle={toggle} />
-      <Header toggle={toggle} />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/" component={PagInicial}>
           <PagInicial />
         </Route>
-        <Route exta path="/seja-sapiente">
-          <SejaSapiente/>
+
+        <Route exact path="/seja-sapiente" component={SejaSapiente}>
+          <SejaSapiente />
         </Route>
+      //  <Route exta path="/seja-sapiente">
+      //    <SejaSapiente/>
+    //    </Route>
+
         <Route>
           <PagErro />
         </Route>
       </Switch>
-      <Footer/>
     </BrowserRouter>
   );
 };

@@ -14,9 +14,11 @@ import { animateScroll as scroll } from 'react-scroll';
 import { goToSejaSapiente } from '../../routes/coordinator';
 import { useHistory } from 'react-router-dom';
 
+
 const Header = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const history = useHistory();
+
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
@@ -31,6 +33,10 @@ const Header = ({ toggle }) => {
 
   const toggleHome = () => {
     scroll.scrollToTop();
+  };
+
+  const toggleBottom = () => {
+    scroll.scrollToBottom();
   };
 
   return (
@@ -72,7 +78,12 @@ const Header = ({ toggle }) => {
         >
           Apoio
         </NavLink>
-        <NavBtnLink onClick={() => goToSejaSapiente(history)}>Seja Sapiente</NavBtnLink>
+
+        <NavLink onClick={toggleBottom}>Contato</NavLink>
+        <NavBtnLink to={''} offset={-80} onClick={() => goToSejaSapiente(history)}>
+          Inscreva-se
+        </NavBtnLink>
+
       </NavMenu>
       <NavBtn></NavBtn>
     </Nav>
