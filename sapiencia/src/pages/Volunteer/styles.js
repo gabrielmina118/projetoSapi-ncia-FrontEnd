@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 9vh;
   height: 100%;
   min-height: 100vh;
-  max-width: 80vw;
+  max-width: 30rem;
   margin-left: auto;
   margin-right: auto;
 
@@ -14,4 +15,11 @@ export const FormContainer = styled.div`
     padding-top: 22vh;
   }
 `;
+
+export const Container = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+`
 

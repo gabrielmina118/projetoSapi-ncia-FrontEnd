@@ -125,32 +125,32 @@ const FormStep1 = (props) => {
         >
           <FormControlLabel
             value="EFI"
-            control={<Radio />}
+            control={<Radio style={{ color: 'black' }}/>}
             label="Ensino Fundamental incompleto"
           />
           <FormControlLabel
             value="EFC"
-            control={<Radio />}
+            control={<Radio style={{ color: 'black' }}/>}
             label="Ensino fundamental completo"
           />
           <FormControlLabel
             value="EMI"
-            control={<Radio />}
+            control={<Radio style={{ color: 'black' }}/>}
             label="Ensino médio incompleto"
           />
           <FormControlLabel
             value="EMC"
-            control={<Radio />}
+            control={<Radio style={{ color: 'black' }}/>}
             label="Ensino médio completo"
           />
           <FormControlLabel
             value="ESI"
-            control={<Radio />}
+            control={<Radio style={{ color: 'black' }}/>}
             label="Ensino superior incompleto"
           />
           <FormControlLabel
             value="ESC"
-            control={<Radio />}
+            control={<Radio style={{ color: 'black' }}/>}
             label="Ensino superior completo"
           />
         </RadioGroup>
