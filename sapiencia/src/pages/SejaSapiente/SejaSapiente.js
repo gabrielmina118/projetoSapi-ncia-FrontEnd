@@ -178,6 +178,7 @@ const SejaSapiente = () => {
               </Buttons>
             </div>
           )}
+          
         </div>
       </div>
     </Main>
