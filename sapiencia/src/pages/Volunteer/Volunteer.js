@@ -20,34 +20,34 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 const Volunteer = () => {
   const history = useHistory();
-  const { form, onChange, resetState } = useForm({
-    name: '',
-    obs: '',
-    birthday: '',
-    cpf: '',
-    rg: '',
-    expeditor: '',
-    address: '',
-    email: '',
-    cellphone: '',
-    phone: '',
-    department: '',
-    hours: '',
+  const [ form, onChange, onChangeRadio, clear ] = useForm({
+    name: "",
+    obs: "",
+    birthday: "",
+    cpf: "",
+    rg: "",
+    expeditor: "",
+    address: "",
+    email: "",
+    cellphone: "",
+    phone: "",
+    department: "",
+    hours: "",
     acordo1: false,
     acordo2: false,
     acordo3: false,
     acordo4: false
   });
 
-  const handleInputChange = (event) => {
-    const { value, name } = event.target;
-    onChange(value, name);
-  };
+//   const handleInputChange = (event) => {
+//     const { value, name } = event.target;
+//     onChange(value, name);
+//   };
 
-  const handleRadioChange = (event) => {
-    const { checked, name } = event.target;
-    onChange(checked, name);
-  };
+//   const handleRadioChange = (event) => {
+//     const { checked, name } = event.target;
+//     onChange(value, name);
+//   };
 
   const SendForm = (event) => {
     event.preventDefault();
@@ -73,7 +73,7 @@ const Volunteer = () => {
       .post(`${BASE_URL}/volunteers/datatoemail`, body)
       .then((res) => {
         alert('Formulário enviado. Aguarde o contato em até 72 horas.');
-        resetState();
+        clear();
         goToHome(history);
       })
       .catch((err) => {
@@ -95,7 +95,7 @@ const Volunteer = () => {
           style={{ backgroundColor: grey[50] }}
           multiline
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="No caso de pessoas trans, coloque o nome que se identifica. Dane-se o RG!"
         />
         <TextField
@@ -107,7 +107,7 @@ const Volunteer = () => {
           style={{ backgroundColor: grey[50] }}
           multiline
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Como prefere que as pessoas se refiram a você?"
         />
         <TextField
@@ -118,7 +118,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="dd/mm/aaaa"
         />
         <TextField
@@ -129,7 +129,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <TextField
@@ -140,7 +140,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <TextField
@@ -151,7 +151,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Órgão/Estado"
         />
         <TextField
@@ -163,7 +163,7 @@ const Volunteer = () => {
           style={{ backgroundColor: grey[50] }}
           multiline
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Rua/Av, Número, CEP, Cidade e Estado"
         />
         <TextField
@@ -174,7 +174,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Preencha aqui"
         />
         <TextField
@@ -185,7 +185,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <TextField
@@ -196,7 +196,7 @@ const Volunteer = () => {
           color="primary"
           style={{ backgroundColor: grey[50] }}
           required
-          onChange={handleInputChange}
+          onChange={onChange}
           placeholder="Somente números"
         />
         <FormControl component="fieldset">
@@ -207,7 +207,7 @@ const Volunteer = () => {
             aria-label="department"
             name="department"
             value={form.department}
-            onChange={handleInputChange}
+            onChange={onChange}
           >
             <FormControlLabel
               value="Administrativo"
@@ -239,7 +239,7 @@ const Volunteer = () => {
             aria-label="hours"
             name="hours"
             value={form.hours}
-            onChange={handleInputChange}
+            onChange={onChange}
           >
             <FormControlLabel value="3h" control={<Radio />} label="3 horas" />
             <FormControlLabel value="4h" control={<Radio />} label="4 horas" />
@@ -258,7 +258,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo1}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo1"
                 />
               }
@@ -268,7 +268,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo2}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo2"
                 />
               }
@@ -278,7 +278,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo3}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo3"
                 />
               }
@@ -288,7 +288,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo4}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo4"
                 />
               }

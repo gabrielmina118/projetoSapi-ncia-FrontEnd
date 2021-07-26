@@ -8,11 +8,16 @@ const useForm = (initialState) => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleRadioChange = (event) => {
+    const { checked, name } = event.target;
+    setFormData({ ...formData, [name]: checked });
+  };
+
   const clear = () => {
     setFormData(initialState);
   };
 
-  return [formData, handleInputChange, clear, setFormData];
+  return [formData, handleInputChange, handleRadioChange, clear, setFormData];
 };
 
 export default useForm;
