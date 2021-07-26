@@ -9,7 +9,7 @@ Lorem Ipsum
 https://github.com/gabrielmina118/projetoSapi-nciaBackEnd
 
 ## Como Usar
-Clonar o repositório, executar `npm install`no terminal e escolher uma das opções abaixo
+Clonar o repositório, executar `npm install` no terminal e escolher uma das opções abaixo
 - No terminal executar o comando `npm run start` para rodar localmente
 - Fazer o deploy da aplicação
 - Utilizar o link abaixo do Surge
