@@ -1,6 +1,7 @@
 import Template1 from '../../assets/Template1.png';
 import Template2 from '../../assets/Template2.png';
 import Template3 from '../../assets/Template3.png';
+import Template4 from '../../assets/Template4.png';
 import QrCode from '../../assets/QrCode.png'
 
 export const homeObjOne = {
@@ -61,7 +62,7 @@ export const homeObjFour = {
   id: 'apoio',
   lightBg: true,
   lightText: false,
-  img: Template2,
+  img: Template4,
   button: true,
   lightTextDesc: false,
   headline: 'Apoio',

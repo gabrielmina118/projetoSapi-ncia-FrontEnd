@@ -6,7 +6,7 @@ export const Main = styled.div`
   align-items: center;
   text-align: center;
   width: auto;
-  max-width: 25rem;
+  max-width: 30rem;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
@@ -19,6 +19,8 @@ export const Fisinh = styled.div`
   display: flex;
   font-size: 25px;
   justify-content: center;
+  text-align: center;
+  width: 100%;
 `;
 
 export const Titulo = styled.div`
@@ -63,4 +65,17 @@ export const NavBtnLink = styled(Link)`
     padding: 10px 10px;
     margin-right: 2rem;
   }
+`;
+
+export const Button = styled.button`
+  border-radius: 4px;
+  width: 7rem;
+  background: black;
+  padding: 10px 22px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
 `;

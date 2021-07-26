@@ -33,10 +33,6 @@ const Header = ({ toggle }) => {
     scroll.scrollToTop();
   };
 
-  const toggleBottom = () => {
-    scroll.scrollToBottom();
-  };
-
   return (
     <Nav scrollNav={scrollNav}>
       <NavLink to="/" onClick={toggleHome}>
