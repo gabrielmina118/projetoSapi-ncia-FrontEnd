@@ -1,5 +1,5 @@
-import { Button } from '@material-ui/core';
 import React, { useState } from 'react';
+import { Button } from '@material-ui/core';
 import FormStep1 from '../../components/Formulario/formStep1';
 import FormStep2 from '../../components/Formulario/formStep2';
 import FormStep3 from '../../components/Formulario/formStep3';
@@ -11,7 +11,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Typography from '@material-ui/core/Typography';
 import { goToHome } from '../../routes/coordinator';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,19 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 function getSteps() {
   return ['Informações Básicas', 'Como você se identifica', 'Sobre o curso'];
-}
-
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <FormStep1 />;
-    case 1:
-      return <FormStep2 />;
-    case 2:
-      return <FormStep3 />;
-    default:
-      return 'Unknown step';
-  }
 }
 
 const SejaSapiente = () => {
@@ -62,12 +49,50 @@ const SejaSapiente = () => {
     receive: '',
     permission: ''
   };
-  const history = useHistory();
+
   const [form, onChange, clear] = useForm(initialState);
+
+  const onSubmitForm = (event) => {
+    event.preventDefault();
+    console.log(form);
+  };
+
+  function getStepContent(step) {
+    switch (step) {
+      case 0:
+        return (
+          <FormStep1
+            form={form}
+            onChange={onChange}
+            onSubmitForm={onSubmitForm}
+          />
+        );
+      case 1:
+        return (
+          <FormStep2
+            form={form}
+            onChange={onChange}
+            onSubmitForm={onSubmitForm}
+          />
+        );
+      case 2:
+        return (
+          <FormStep3
+            form={form}
+            onChange={onChange}
+            onSubmitForm={onSubmitForm}
+          />
+        );
+      default:
+        return 'Unknown step';
+    }
+  }
+
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const steps = getSteps();
+  const history = useHistory();
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -82,6 +107,11 @@ const SejaSapiente = () => {
     if (isStepSkipped(activeStep)) {
       newSkipped = new Set(newSkipped.values());
       newSkipped.delete(activeStep);
+    }
+
+    if (activeStep === 2) {
+      // Chamada da api
+      console.log(form);
     }
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -120,6 +150,8 @@ const SejaSapiente = () => {
                   Cadastrado com sucesso ! Dentro de 72 horas entraremos em
                   contato
                 </Fisinh>
+                // BOTAO PRA HOME
+                <button onClick={() => goToHome(history)}>Teste</button>
               </Typography>
             </div>
           ) : (
@@ -142,14 +174,6 @@ const SejaSapiente = () => {
                   className={classes.button}
                 >
                   {activeStep === steps.length - 1 ? 'Terminado' : 'Próximo'}
-                </Button>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={() => goToHome(history)}
-                  className={classes.button}
-                >
-                  Home
                 </Button>
               </Buttons>
             </div>
