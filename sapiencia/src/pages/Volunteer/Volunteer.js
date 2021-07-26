@@ -20,30 +20,34 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 const Volunteer = () => {
   const history = useHistory();
-  
-  const [form, onChange, clear] = useForm({
-    name: '',
-    obs: '',
-    birthday: '',
-    cpf: '',
-    rg: '',
-    expeditor: '',
-    address: '',
-    email: '',
-    cellphone: '',
-    phone: '',
-    department: '',
-    hours: '',
+  const [ form, onChange, onChangeRadio, clear ] = useForm({
+    name: "",
+    obs: "",
+    birthday: "",
+    cpf: "",
+    rg: "",
+    expeditor: "",
+    address: "",
+    email: "",
+    cellphone: "",
+    phone: "",
+    department: "",
+    hours: "",
     acordo1: false,
     acordo2: false,
     acordo3: false,
     acordo4: false
   });
 
-  const handleRadioChange = (event) => {
-    const { checked, name } = event.target;
-    onChange(checked, name);
-  };
+//   const handleInputChange = (event) => {
+//     const { value, name } = event.target;
+//     onChange(value, name);
+//   };
+
+//   const handleRadioChange = (event) => {
+//     const { checked, name } = event.target;
+//     onChange(value, name);
+//   };
 
   const SendForm = (event) => {
     event.preventDefault();
@@ -252,7 +256,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo1}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo1"
                 />
               }
@@ -262,7 +266,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo2}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo2"
                 />
               }
@@ -272,7 +276,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo3}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo3"
                 />
               }
@@ -282,7 +286,7 @@ const Volunteer = () => {
               control={
                 <Checkbox
                   checked={form.acordo4}
-                  onChange={handleRadioChange}
+                  onChange={onChangeRadio}
                   name="acordo4"
                 />
               }
