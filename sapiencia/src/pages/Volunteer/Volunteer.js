@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { goToHome } from '../../routes/coordinator';
 import  useForm  from '../../Hooks/useForm'
-import { FormContainer } from './styles';
+import { Container, FormContainer } from './styles';
 import {
   Button,
   FormControl,
@@ -74,6 +74,7 @@ const Volunteer = () => {
   return (
     <div>
       <FormContainer onSubmit={SendForm}>
+        <Container>
         <TextField
           name="name"
           value={form.name}
@@ -86,6 +87,7 @@ const Volunteer = () => {
           onChange={onChange}
           placeholder="No caso de pessoas trans, coloque o nome que se identifica. Dane-se o RG!"
         />
+        </Container>
         <TextField
           name="obs"
           value={form.obs}
@@ -198,9 +200,9 @@ const Volunteer = () => {
             onChange={onChange}
           >
             <FormControlLabel
+            color="primary"
               value="Administrativo"
               control={<Radio />}
-              color='#0000'
               label="Departamento Administrativo"
             />
             <FormControlLabel
@@ -246,6 +248,7 @@ const Volunteer = () => {
             <FormControlLabel
               control={
                 <Checkbox
+                  style={{ color: 'black' }}
                   checked={form.acordo1}
                   onChange={onChangeRadio}
                   name="acordo1"
@@ -256,6 +259,7 @@ const Volunteer = () => {
             <FormControlLabel
               control={
                 <Checkbox
+                  style={{ color: 'black' }}
                   checked={form.acordo2}
                   onChange={onChangeRadio}
                   name="acordo2"
@@ -266,6 +270,7 @@ const Volunteer = () => {
             <FormControlLabel
               control={
                 <Checkbox
+                  style={{ color: 'black' }}
                   checked={form.acordo3}
                   onChange={onChangeRadio}
                   name="acordo3"
@@ -276,6 +281,7 @@ const Volunteer = () => {
             <FormControlLabel
               control={
                 <Checkbox
+                  style={{ color: 'black' }}
                   checked={form.acordo4}
                   onChange={onChangeRadio}
                   name="acordo4"
@@ -286,6 +292,13 @@ const Volunteer = () => {
           </FormGroup>
         </FormControl>
 
+        <Button
+          onClick={() => goToHome(history)}
+          variant="outlined"
+          style={{ borderColor: 'black' }}
+        >
+          Início
+        </Button>
         <Button
           type="submit"
           onClick={SendForm}
