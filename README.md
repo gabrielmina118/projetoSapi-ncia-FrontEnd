@@ -5,7 +5,7 @@ Lorem Ipsum
 
 ---
 
-## Link do repositório do Backend
+## Link do repositório do Back-end
 https://github.com/gabrielmina118/projetoSapi-nciaBackEnd
 
 ## Como Usar
