@@ -76,7 +76,7 @@ const Header = ({ toggle }) => {
         >
           Apoio
         </NavLink>
-        <NavLink onClick={toggleBottom}>Contato</NavLink>
+        <NavLink to='' onClick={toggleBottom}>Contato</NavLink>
         <NavBtnLink
           to={''}
           offset={-80}

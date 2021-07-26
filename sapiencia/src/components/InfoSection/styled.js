@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : 'black')};
@@ -18,6 +18,7 @@ export const InfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+  align-items: center;
 `;
 
 export const InfoRow = styled.div`
@@ -86,6 +87,20 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
+`;
+
+export const ButtonC = styled(Link)`
+  border-radius: 4px;
+  width: 7rem;
+  background: black;
+  padding: 10px 22px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  display: ${({ button }) => (button ? 'block' : 'none')};
 `;
 
 export const BtnWrap = styled.div`

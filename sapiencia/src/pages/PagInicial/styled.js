@@ -45,3 +45,57 @@ export const DivContainer = styled.div`
   width: 100%;
   height: 60rem;
 `;
+
+export const Div = styled.div`
+  padding: 2rem;
+  display: flex;
+  margin: 0 auto;
+  width: auto;
+  height: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  text-align: center;
+
+  @media screen and (max-width: 868px) {
+    height: 10rem;
+  }
+`;
+
+export const SButton = styled.button`
+  cursor: pointer;
+  font-weight: bold;
+  background: black;
+  padding: 10px 22px;
+  width: 100%;
+  height: 15rem;
+  color: white;
+  outline: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.5s ease-in-out;
+  }
+
+  @media screen and (max-width: 1050px) {
+    padding: 10px 10px;
+  }
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Container2 = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

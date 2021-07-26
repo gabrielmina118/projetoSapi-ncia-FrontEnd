@@ -5,7 +5,7 @@ import {
   RadioGroup
 } from '@material-ui/core';
 import React from 'react';
-import { Form, Titulo, Main } from './style';
+import { Form, Main } from './style';
 
 const FormStep1 = (props) => {
   return (
@@ -16,7 +16,7 @@ const FormStep1 = (props) => {
           name={'name'}
           value={props.form.name}
           onChange={props.onChange}
-          size="normal"
+          size="small"
           required
           fullWidth
           borderColor="green"
@@ -34,7 +34,7 @@ const FormStep1 = (props) => {
           value={props.form.email}
           onChange={props.onChange}
           type="email"
-          size="normal"
+          size="small"
           required
           fullWidth
           borderColor="green"
@@ -51,7 +51,7 @@ const FormStep1 = (props) => {
           name={'phone'}
           value={props.form.phone}
           onChange={props.onChange}
-          size="normal"
+          size="small"
           required
           fullWidth
           borderColor="green"
@@ -69,7 +69,7 @@ const FormStep1 = (props) => {
           value={props.form.age}
           onChange={props.onChange}
           type="number"
-          size="normal"
+          size="small"
           required
           fullWidth
           borderColor="green"
@@ -86,7 +86,7 @@ const FormStep1 = (props) => {
           name={'neighbor'}
           value={props.form.neighbor}
           onChange={props.onChange}
-          size="normal"
+          size="small"
           required
           fullWidth
           borderColor="green"
@@ -103,7 +103,7 @@ const FormStep1 = (props) => {
           name={'city'}
           value={props.form.city}
           onChange={props.onChange}
-          size="normal"
+          size="small"
           required
           fullWidth
           borderColor="green"

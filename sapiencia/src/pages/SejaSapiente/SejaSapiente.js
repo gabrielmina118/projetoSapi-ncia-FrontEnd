@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@material-ui/core';
 import FormStep1 from '../../components/Formulario/formStep1';
 import FormStep2 from '../../components/Formulario/formStep2';
@@ -50,7 +50,7 @@ const SejaSapiente = () => {
     permission: ''
   };
 
-  const [form, onChange, clear] = useForm(initialState);
+  const [form, onChange] = useForm(initialState);
 
   const onSubmitForm = (event) => {
     event.preventDefault();
@@ -110,7 +110,6 @@ const SejaSapiente = () => {
     }
 
     if (activeStep === 2) {
-      // Chamada da api
       console.log(form);
     }
 
@@ -150,7 +149,6 @@ const SejaSapiente = () => {
                   Cadastrado com sucesso ! Dentro de 72 horas entraremos em
                   contato
                 </Fisinh>
-                // BOTAO PRA HOME
                 <button onClick={() => goToHome(history)}>Teste</button>
               </Typography>
             </div>
@@ -178,7 +176,6 @@ const SejaSapiente = () => {
               </Buttons>
             </div>
           )}
-          
         </div>
       </div>
     </Main>

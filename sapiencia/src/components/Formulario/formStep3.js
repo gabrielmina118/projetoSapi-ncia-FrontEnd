@@ -1,8 +1,6 @@
 import React from 'react';
 import {
-  Button,
   FormLabel,
-  TextField,
   FormControlLabel,
   Radio,
   RadioGroup

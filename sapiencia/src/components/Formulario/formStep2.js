@@ -1,13 +1,10 @@
 import {
-  Button,
   FormLabel,
-  TextField,
   FormControlLabel,
   Radio,
   RadioGroup
 } from '@material-ui/core';
 import React from 'react';
-import useForm from '../../hooks/useForm';
 import { Form, Titulo, Main, SubTitulo, GroupControlLabel } from './style';
 
 const FormStep2 = (props) => {
