@@ -155,13 +155,11 @@ const SejaSapiente = () => {
                 {getStepContent(activeStep)}
               </Typography>
               <Buttons>
-                <Button
-                  disabled={activeStep === 0}
-                  onClick={handleBack}
-                  className={classes.button}
-                >
-                  Voltar
-                </Button>
+                {activeStep !== 0 && (
+                  <Button onClick={handleBack} className={classes.button}>
+                    Voltar
+                  </Button>
+                )}
                 <Button
                   variant="contained"
                   color="primary"
