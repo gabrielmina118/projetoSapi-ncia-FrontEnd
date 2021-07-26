@@ -12,7 +12,8 @@ import {
 import Logo from '../../assets/Logo.png';
 import { animateScroll as scroll } from 'react-scroll';
 import { goToSejaSapiente } from '../../routes/coordinator';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
+
 
 const Header = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -77,10 +78,12 @@ const Header = ({ toggle }) => {
         >
           Apoio
         </NavLink>
+
         <NavLink onClick={toggleBottom}>Contato</NavLink>
         <NavBtnLink to={''} offset={-80} onClick={() => goToSejaSapiente(history)}>
           Inscreva-se
         </NavBtnLink>
+
       </NavMenu>
       <NavBtn></NavBtn>
     </Nav>

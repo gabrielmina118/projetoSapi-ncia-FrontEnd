@@ -11,9 +11,14 @@ const Router = () => {
         <Route exact path="/" component={PagInicial}>
           <PagInicial />
         </Route>
+
         <Route exact path="/seja-sapiente" component={SejaSapiente}>
           <SejaSapiente />
         </Route>
+      //  <Route exta path="/seja-sapiente">
+      //    <SejaSapiente/>
+    //    </Route>
+
         <Route>
           <PagErro />
         </Route>
