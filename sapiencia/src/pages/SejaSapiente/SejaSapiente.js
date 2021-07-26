@@ -113,6 +113,7 @@ const SejaSapiente = () => {
             // Chamada da api
             console.log(form)
         }
+        
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
         setSkipped(newSkipped);
     };
