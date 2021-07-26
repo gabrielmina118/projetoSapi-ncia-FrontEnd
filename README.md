@@ -1,7 +1,7 @@
 # Projeto Front-end da ONG Sapiência - ProviHack4Good (Julho/2021)
 
 ## Sobre
-Lorem Ipsum
+Nossa solução foi pensar um website responsivo que capta voluntários e estudantes através de formulários de inscrição. Além de divulgar os cursos abertos e conectar todas as redes e contatos do projeto.
 
 ---
 
@@ -15,4 +15,4 @@ Clonar o repositório, executar `npm install` no terminal e escolher uma das op�
 - Utilizar o link abaixo do Surge
 
 ## Link do Surge
-http://sapiencia-provihack4good.surge.sh/
+http://projeto-sapiencia.surge.sh

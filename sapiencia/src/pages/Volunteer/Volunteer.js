@@ -271,6 +271,7 @@ const Volunteer = () => {
           <FormLabel component="legend"
           style={{ color: 'black', fontWeight: 'bold' }}>Nos diga se está de acordo: </FormLabel>
           <FormGroup>
+            <Container>
             <FormControlLabel
               control={
                 <Checkbox
@@ -282,6 +283,8 @@ const Volunteer = () => {
               }
               label="Eu estou ciente de que me comprometo a auxiliar o Sapiência na implementação e desenvolvimento de seus objetivos institucionais, efetuando atividades no departamento selecionado acima, observando as diretrizes aqui traçadas, bem como aquelas informadas pelo responsável da área de Voluntariado (conforme o caso)."
             />
+            </Container>
+            <Container>
             <FormControlLabel
               control={
                 <Checkbox
@@ -293,6 +296,8 @@ const Volunteer = () => {
               }
               label="Eu estou ciente de que despesas previamente autorizadas pelo Sapiência e realizadas em benefício deste poderão ser reembolsadas ao voluntário mediante a comprovação dos gastos."
             />
+            </Container>
+            <Container>
             <FormControlLabel
               control={
                 <Checkbox
@@ -304,6 +309,8 @@ const Volunteer = () => {
               }
               label="Eu estou ciente de que o presente Termo de Adesão tem prazo indeterminado, tendo seu término efetivado com o desligamento do(a) voluntário(a), de acordo com a vontade de uma das partes."
             />
+            </Container>
+            <Container>
             <FormControlLabel
               control={
                 <Checkbox
@@ -315,6 +322,7 @@ const Volunteer = () => {
               }
               label="Eu estou ciente de que o serviço voluntário, conforme a Lei nº 9.608, de 18 de fevereiro de 1998, “não gera vínculo empregatício, nem obrigação de natureza trabalhista, previdenciária ou afim”, não cabendo portanto, ao(à) voluntário(a) qualquer remuneração ou ressarcimento pelos serviços prestados ao Sapiência."
             />
+            </Container>
           </FormGroup>
         </FormControl>
         </Container>

@@ -20,6 +20,7 @@ export const Container = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-top: 5px;
 `
 
