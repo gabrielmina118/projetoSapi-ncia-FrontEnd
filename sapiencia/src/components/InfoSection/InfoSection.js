@@ -1,6 +1,7 @@
 import React from 'react';
-import Template1 from '../../assets/Template1.png';
+import { useHistory } from 'react-router-dom';
 import {
+  ButtonC,
   Column1,
   Column2,
   Heading,
@@ -22,8 +23,11 @@ const InfoSection = ({
   darkText,
   description,
   description2,
-  description3
+  description3,
+  img,
+  button
 }) => {
+  const history = useHistory();
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -35,11 +39,14 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <Subtitle darkText={darkText}>{description2}</Subtitle>
                 <Subtitle darkText={darkText}>{description3}</Subtitle>
+                <ButtonC button={button} to="/voluntario">
+                  Seja Voluntário
+                </ButtonC>
               </TextWrapper>
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={Template1} alt={'Template1'} />
+                <Img src={img} alt={'Template1'} />
               </ImgWrap>
             </Column2>
           </InfoRow>

@@ -79,13 +79,25 @@ const Footer = () => {
               Todos os direitos reservados.
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" arial_label="Instagram">
+              <SocialIconLink
+                href="https://www.instagram.com/projeto.sapiencia/"
+                target="_blank"
+                arial_label="Instagram"
+              >
                 <FaInstagram />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" arial_label="LinkedIn">
+              <SocialIconLink
+                href="https://www.linkedin.com/in/sapiência-projeto-03a5611b3/"
+                target="_blank"
+                arial_label="LinkedIn"
+              >
                 <FaLinkedin />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" arial_label="Youtube">
+              <SocialIconLink
+                href="https://www.youtube.com/channel/UCvnsRrVnyJSZbnD1l10NjtQ/featured"
+                target="_blank"
+                arial_label="Youtube"
+              >
                 <FaYoutube />
               </SocialIconLink>
             </SocialIcons>
