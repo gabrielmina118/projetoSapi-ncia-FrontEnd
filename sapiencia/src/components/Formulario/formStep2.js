@@ -24,18 +24,18 @@ const FormStep2 = (props) => {
           onChange={props.onChange}
         >
           <GroupControlLabel>
-            <FormControlLabel value="homem" control={<Radio />} label="homem" />
+            <FormControlLabel value="homem" control={<Radio style={{ color: 'black' }}/>} label="homem" />
             <FormControlLabel
               value="mulher"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="mulher"
             />
             <FormControlLabel
               value="naoBinario"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="NãoBinário"
             />
-            <FormControlLabel value="outro" control={<Radio />} label="Outro" />
+            <FormControlLabel value="outro" control={<Radio style={{ color: 'black' }}/>} label="Outro" />
           </GroupControlLabel>
         </RadioGroup>
 
@@ -49,16 +49,16 @@ const FormStep2 = (props) => {
           onChange={props.onChange}
         >
           <GroupControlLabel>
-            <FormControlLabel value="sim" control={<Radio />} label="Sim" />
-            <FormControlLabel value="nao" control={<Radio />} label="Não" />
+            <FormControlLabel value="sim" control={<Radio style={{ color: 'black' }}/>} label="Sim" />
+            <FormControlLabel value="nao" control={<Radio style={{ color: 'black' }}/>} label="Não" />
             <FormControlLabel
               value="talvez"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Talvez"
             />
             <FormControlLabel
               value="prefiroNaoResponder"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Prefiro não responder"
             />
           </GroupControlLabel>
@@ -74,16 +74,16 @@ const FormStep2 = (props) => {
           onChange={props.onChange}
         >
           <GroupControlLabel>
-            <FormControlLabel value="sim" control={<Radio />} label="Sim" />
-            <FormControlLabel value="nao" control={<Radio />} label="Não" />
+            <FormControlLabel value="sim" control={<Radio style={{ color: 'black' }}/>} label="Sim" />
+            <FormControlLabel value="nao" control={<Radio style={{ color: 'black' }}/>} label="Não" />
             <FormControlLabel
               value="talvez"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Talvez"
             />
             <FormControlLabel
               value="prefiroNaoResponder"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Prefiro não responder"
             />
           </GroupControlLabel>
@@ -97,27 +97,27 @@ const FormStep2 = (props) => {
           onChange={props.onChange}
         >
           <GroupControlLabel>
-            <FormControlLabel value="negro" control={<Radio />} label="Negro" />
+            <FormControlLabel value="negro" control={<Radio style={{ color: 'black' }}/>} label="Negro" />
             <FormControlLabel
               value="branco"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Branco"
             />
-            <FormControlLabel value="pardo" control={<Radio />} label="Pardo" />
+            <FormControlLabel value="pardo" control={<Radio style={{ color: 'black' }}/>} label="Pardo" />
             <FormControlLabel
               value="amarelo"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Amarelo"
             />
             <FormControlLabel
               value="indigena"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Indígena"
             />
-            <FormControlLabel value="outro" control={<Radio />} label="Outro" />
+            <FormControlLabel value="outro" control={<Radio style={{ color: 'black' }}/>} label="Outro" />
             <FormControlLabel
               value="prefiroNaoResponder"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Prefiro não responder"
             />
           </GroupControlLabel>
@@ -133,16 +133,16 @@ const FormStep2 = (props) => {
           onChange={props.onChange}
         >
           <GroupControlLabel>
-            <FormControlLabel value="sim" control={<Radio />} label="Sim" />
-            <FormControlLabel value="nao" control={<Radio />} label="Não" />
+            <FormControlLabel value="sim" control={<Radio style={{ color: 'black' }}/>} label="Sim" />
+            <FormControlLabel value="nao" control={<Radio style={{ color: 'black' }}/>} label="Não" />
             <FormControlLabel
               value="naoSei"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Não sei"
             />
             <FormControlLabel
               value="prefiroNaoResponder"
-              control={<Radio />}
+              control={<Radio style={{ color: 'black' }}/>}
               label="Prefiro não responder"
             />
           </GroupControlLabel>
