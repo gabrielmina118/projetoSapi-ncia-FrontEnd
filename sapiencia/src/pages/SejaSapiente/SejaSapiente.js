@@ -53,7 +53,6 @@ const SejaSapiente = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log(form);
   };
 
   function getStepContent(step) {
@@ -109,7 +108,6 @@ const SejaSapiente = () => {
     }
 
     if (activeStep === 2) {
-      console.log(form);
     }
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -155,13 +153,11 @@ const SejaSapiente = () => {
                 {getStepContent(activeStep)}
               </Typography>
               <Buttons>
-                <Button
-                  disabled={activeStep === 0}
-                  onClick={handleBack}
-                  className={classes.button}
-                >
-                  Voltar
-                </Button>
+                {activeStep !== 0 && (
+                  <Button onClick={handleBack} className={classes.button}>
+                    Voltar
+                  </Button>
+                )}
                 <Button
                   variant="contained"
                   color="primary"

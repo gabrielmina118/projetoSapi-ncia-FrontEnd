@@ -13,7 +13,6 @@ import barkus from '../../assets/barkus.png';
 import fagulha from '../../assets/fagulha.png';
 import fretadao from '../../assets/fretadao.png';
 import linkedin from '../../assets/linkedin.png';
-import quero_bolsa from '../../assets/quero_bolsa.png';
 import vivare from '../../assets/vivare.png';
 
 const InfoSection3 = () => {
@@ -42,9 +41,6 @@ const InfoSection3 = () => {
           </SwiperSlide>
           <SwiperSlide>
             <img src={linkedin} alt="linkedin" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={quero_bolsa} alt="quero_bolsa" />
           </SwiperSlide>
           <SwiperSlide>
             <img src={vivare} alt="vivare" />
